@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/TheGolurk/RestfulApi/response"
+	"github.com/TheGolurk/RestfulAPI/response"
 	"github.com/labstack/echo"
 )
 
