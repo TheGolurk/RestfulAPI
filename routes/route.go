@@ -7,5 +7,6 @@ import (
 
 // StartRoutes Inicializa las rutas
 func StartRoutes(e *echo.Echo) {
-	e.GET("api/v1/user", user.Create)
+	e.POST("api/v1/user", user.Create) //CREATE
+	e.GET("api/v1/user", user.GetAll)  //GetAll Users
 }

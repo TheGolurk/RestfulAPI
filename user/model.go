@@ -1,18 +1,29 @@
 package user
 
-// Model es la estructura para el usuario
-type Model struct {
+import "github.com/jinzhu/gorm"
+
+// User es la estructura para el usuario
+type User struct {
+	gorm.Model
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
-	Age       int32  `json:"Age"`
+	Age       int32  `json:"age"`
 }
 
-// Storage es un mapa del modelo
-type Storage map[string]*Model
+// var storage Storage
 
-var storage Storage
+// // Storage es un mapa del modelo
+// type Storage map[string]*Model
 
-// Create crea un nuevo usuario
-func (s Storage) Create(m *Model) *Model {
-	return m
-}
+// Add crea un nuevo usuario
+// func Add(m *Model) *Model {
+// 	db := database.Init()
+// 	db.NewRecord(m)
+// 	db.Create(m)
+// 	return m
+// }
+
+// // GetAll Retorna todos los usuarios
+// func (s Storage) GetAll() *Model {
+// 	return m
+// }
