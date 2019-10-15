@@ -16,7 +16,7 @@ func main() {
 
 	routes.StartRoutes(e)
 
-	err := e.Start("192.168.0.4:5000")
+	err := e.Start(":5000")
 	if err != nil {
 		fmt.Printf("Error, no se pudo ejecutar el servidor: %v", err)
 	}

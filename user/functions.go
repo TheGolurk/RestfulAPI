@@ -71,3 +71,29 @@ func GetAll(c echo.Context) error {
 	return json.NewEncoder(c.Response()).Encode(r)
 
 }
+
+// Delete elimina un usuario por su id
+func Delete(c echo.Context) error {
+	return c.JSON(http.StatusOK, c.Param("id"))
+	// var usuario User
+	// id := c.Param("id")
+
+	// db := configuration.GetConnection()
+	// defer db.Close()
+
+	// db.First(&usuario, &id)
+	// db.Delete(&usuario)
+
+	// users := []User{}
+	// db.Find(&users)
+
+	// r := response.Model{
+	// 	Code:    "202",
+	// 	Message: "Eliminado Correctamente",
+	// 	Data:    &users,
+	// }
+
+	// c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	// c.Response().WriteHeader(http.StatusAccepted)
+	// return json.NewEncoder(c.Response()).Encode(r)
+}
