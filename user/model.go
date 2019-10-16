@@ -7,7 +7,7 @@ type User struct {
 	gorm.Model
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
-	Age       int32  `json:"age"`
+	Age       int    `json:"age"`
 }
 
 // var storage Storage
