@@ -142,10 +142,12 @@ func Get(c echo.Context) error {
 	db := configuration.GetConnection()
 	defer db.Close()
 
+	consulta := db.First(&User{}, id)
+
 	r := response.Model{
 		Code:    "200",
 		Message: "Consultado correctamente",
-		Data:    db.First(&User{}, id),
+		Data:    consulta,
 	}
 
 	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)

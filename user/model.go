@@ -9,21 +9,3 @@ type User struct {
 	LastName  string `json:"last_name"`
 	Age       int    `json:"age"`
 }
-
-// var storage Storage
-
-// // Storage es un mapa del modelo
-// type Storage map[string]*Model
-
-// Add crea un nuevo usuario
-// func Add(m *Model) *Model {
-// 	db := database.Init()
-// 	db.NewRecord(m)
-// 	db.Create(m)
-// 	return m
-// }
-
-// // GetAll Retorna todos los usuarios
-// func (s Storage) GetAll() *Model {
-// 	return m
-// }
