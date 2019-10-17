@@ -45,5 +45,14 @@ func GetConnection() *gorm.DB {
 		log.Fatal(err)
 	}
 
+	db.AutoMigrate(&user{})
+
 	return db
+}
+
+type user struct {
+	gorm.Model
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Age       int    `json:"age"`
 }
